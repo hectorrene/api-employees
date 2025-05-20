@@ -101,10 +101,10 @@ class CompanyEmployees(Resource):
         
         return result, 200
 
-api.add_resource(Employees, '/')
-api.add_resource(addEmployee, '/add')
-api.add_resource(updateEmployee, '/update/<int:id>')
-api.add_resource(deleteEmployee, '/delete/<int:id>')
+api.add_resource(Employees, '/employees')
+api.add_resource(addEmployee, '/employees/add')
+api.add_resource(updateEmployee, '/employees/update/<int:id>')
+api.add_resource(deleteEmployee, '/employees/delete/<int:id>')
 api.add_resource(CompanyEmployees, '/company/<int:company_id>/employees')
 
 if __name__ == '__main__':
