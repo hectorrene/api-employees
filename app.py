@@ -5,15 +5,8 @@ import json, boto3, threading, time
 app = Flask(__name__)
 api = Api(app)
 
-sqs = boto3.client(
-    'sqs',
-    region_name='us-east-1',
-    aws_access_key_id='ASIAUA4NCJJ5KJQ74W4A',
-    aws_secret_access_key='mrrkPKwfS1TZjfMzqE3t2zVC0aIEm6plOY/SzjUq',
-    aws_session_token='IQoJb3JpZ2luX2VjEAcaCXVzLXdlc3QtMiJHMEUCIQD9+UniRnHW10gN+eS87Ltwyv1ZQ9yZGps3zjMqATkFywIgDUT0/oWgdEEVSdt4Rnz5y/deKRKm4vaUgv2++qByuH0qvgIIwP//////////ARAAGgwyNzY3ODQzNjgyNTAiDEtV8mrWsq2NzA2bwCqSAnyDNWJh/OUP4c5QrU/ru/rXRFHBPTQ2pzrze6ZzNpnvjVob/OHmfTsS4Hk5pbG1z+1YZJzjBHuVY5ZgMikRunOUJqfv1faKuOuu1vx99DJA+MgMuruH3yXGNMu6qzJxTfffZ95K5l4tO1mVIXkDxJKNFH4QYXj/fyGo5QAGq8egkDsyDDipoESnqGZPAL6fyqEHly9/bxfBKffHqXAMNiO3yKvpw5QpDrj5YDXJMGS61N3D8I0Lo2JlTzcaIo7mKTWreBnCqBkgyJO+qpzR4nttwL0EdSlX2D441SNFEhgOZpaeyBtWPlDAXqUB83wAjA/An0PIp9OdoiVodPv1Rb1ldw4Ni7G9SYLH+yJGCy9V2ykwzs23wQY6nQEWNfB2ZuEjjRZddU6r2RaK6ZLAXD0Cmrlem8wps/vHy9/Jt8TZWJrEFIxNCFC8Hulu81hM4854s7LdNalxOxYPMPyUeZAor6CknA37Er7gI+yor/XEinyEOjayApHkudDxbsgWew7meJlJ/ceY9XCrhdBPRDRkd8Rm4dW9TrZ5WOT01PvE2UDjUouIxuAhWt534u7GmaDVg5S5ykXn',
-)
-
-queue_url = 'https://sqs.us-east-1.amazonaws.com/276784368250/my-api-queue'
+sqs = boto3.client('sqs', region_name='us-east-1')
+queue_url = 'https://sqs.us-east-2.amazonaws.com/723851871329/my-api-queue'
 
 employees = { 
     1: {'name' : 'Oscar Mendivil', 'companyId': '1'},
