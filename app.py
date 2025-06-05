@@ -5,7 +5,7 @@ import json, boto3, threading, time
 app = Flask(__name__)
 api = Api(app)
 
-sqs = boto3.client('sqs', region_name='us-east-1')
+sqs = boto3.client('sqs', region_name='us-east-2')
 queue_url = 'https://sqs.us-east-2.amazonaws.com/723851871329/my-api-queue'
 
 employees = { 
